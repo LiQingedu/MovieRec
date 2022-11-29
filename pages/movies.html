@@ -1,0 +1,430 @@
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MovRec</title>
+        <link rel="stylesheet" href="../styles/style.css" type="text/css">
+        <script type="text/javascript" src="../js/input.js"></script>
+
+    </head>
+    <body>
+
+        <div class="grid">
+          <p>Please keep in mind the following scenario while answering
+          questions in this part of the study:</p>
+          <h2 id="disp"></h2>
+          <hr>
+
+        <h3>Below are the details of a movie that is recommended to you
+        by the MovieRec system:</h3>
+        <form id="movform" action="moviesform.php" method="POST">
+          <input type="hidden" id="uid" name="uid">
+          <input type="hidden" id="sce" name="sce">
+          <script>
+          var sce=localStorage.getItem("sce");
+          document.getElementById("sce").value=sce;
+          document.getElementById("disp").innerHTML=sce;
+          let user=localStorage.getItem("user");
+          document.getElementById("uid").value=user;
+          </script>
+            <div class="tab">
+
+              <h3>Title: <span id="title0"/></h3>
+
+              <p>Genre: <span id="genre0"/></p>
+              <p>Year: <span id="year0"/></p>
+              <p>Plot: <span id="plot0"/></p>
+                <hr>
+                <p id="question0"></p>
+                <ul class="likert">
+                    <li> Not at All </li>
+                    <li><input type="radio" name="mov1" value="1" /></li>
+                    <li><input type="radio" name="mov1" value="2" /></li>
+                    <li><input type="radio" name="mov1" value="3" /></li>
+                    <li><input type="radio" name="mov1" value="4" /></li>
+                    <li><input type="radio" name="mov1" value="5" /></li>
+                    <li><input type="radio" name="mov1" value="6" /></li>
+                    <li><input type="radio" name="mov1" value="7" /></li>
+                    <li><input type="hidden" id="timer1" name="timer1" value="0"> </li>
+                    <li> Very Likely </li>
+                </ul>
+            </div>
+
+            <div class="tab">
+              <h3>Title: <span id="title1"/></h3>
+
+              <p>Genre: <span id="genre1"/></p>
+              <p>Year: <span id="year1"/></p>
+              <p>Plot: <span id="plot1"/></p>
+              <hr>
+                <p id="question1"></p>
+                <ul class="likert">
+                    <li> Not at All </li>
+                    <li><input type="radio" name="mov2" value="1" /></li>
+                    <li><input type="radio" name="mov2" value="2" /></li>
+                    <li><input type="radio" name="mov2" value="3" /></li>
+                    <li><input type="radio" name="mov2" value="4" /></li>
+                    <li><input type="radio" name="mov2" value="5" /></li>
+                    <li><input type="radio" name="mov2" value="6" /></li>
+                    <li><input type="radio" name="mov2" value="7" /></li>
+                    <li><input type="hidden" id="timer2" name="timer2" value="0"> </li>
+                    <li> Very Likely </li>
+                </ul>
+            </div>
+
+            <div class="tab">
+              <h3>Title: <span id="title2"/></h3>
+
+              <p>Genre: <span id="genre2"/></p>
+              <p>Year: <span id="year2"/></p>
+              <p>Plot: <span id="plot2"/></p>
+              <hr>
+                <p id="question2"></p>
+                <ul class="likert">
+                    <li> Not at All </li>
+                    <li><input type="radio" name="mov3" value="1" /></li>
+                    <li><input type="radio" name="mov3" value="2" /></li>
+                    <li><input type="radio" name="mov3" value="3" /></li>
+                    <li><input type="radio" name="mov3" value="4" /></li>
+                    <li><input type="radio" name="mov3" value="5" /></li>
+                    <li><input type="radio" name="mov3" value="6" /></li>
+                    <li><input type="radio" name="mov3" value="7" /></li>
+                    <li><input type="hidden" id="timer3" name="timer3" value="0"> </li>
+                    <li> Very Likely </li>
+                </ul>
+            </div>
+
+            <div class="tab">
+              <h3>Title: <span id="title3"/></h3>
+
+              <p>Genre: <span id="genre3"/></p>
+              <p>Year: <span id="year3"/></p>
+              <p>Plot: <span id="plot3"/></p>
+              <hr>
+                <p id="question3"></p>
+                <ul class="likert">
+                    <li> Not at All </li>
+                    <li><input type="radio" name="mov4" value="1" /></li>
+                    <li><input type="radio" name="mov4" value="2" /></li>
+                    <li><input type="radio" name="mov4" value="3" /></li>
+                    <li><input type="radio" name="mov4" value="4" /></li>
+                    <li><input type="radio" name="mov4" value="5" /></li>
+                    <li><input type="radio" name="mov4" value="6" /></li>
+                    <li><input type="radio" name="mov4" value="7" /></li>
+                    <li><input type="hidden" id="timer4" name="timer4" value="0"> </li>
+                    <li> Very Likely </li>
+                </ul>
+            </div>
+
+            <div class="tab">
+              <h3>Title: <span id="title4"/></h3>
+
+              <p>Genre: <span id="genre4"/></p>
+              <p>Year: <span id="year4"/></p>
+              <p>Plot: <span id="plot4"/></p>
+              <hr>
+                <p id="question4"></p>
+                <ul class="likert">
+                    <li> Not at All </li>
+                    <li><input type="radio" name="mov5" value="1" /></li>
+                    <li><input type="radio" name="mov5" value="2" /></li>
+                    <li><input type="radio" name="mov5" value="3" /></li>
+                    <li><input type="radio" name="mov5" value="4" /></li>
+                    <li><input type="radio" name="mov5" value="5" /></li>
+                    <li><input type="radio" name="mov5" value="6" /></li>
+                    <li><input type="radio" name="mov5" value="7" /></li>
+                    <li><input type="hidden" id="timer5" name="timer5" value="0"> </li>
+                    <li> Very Likely </li>
+                </ul>
+            </div>
+
+            <div class="tab">
+
+              <h3>Title: <span id="title5"/></h3>
+
+              <p>Genre: <span id="genre5"/></p>
+              <p>Year: <span id="year5"/></p>
+              <p>Plot: <span id="plot5"/></p>
+                <hr>
+                <p id="question5"></p>
+                <ul class="likert">
+                    <li> Not at All </li>
+                    <li><input type="radio" name="mov6" value="1" /></li>
+                    <li><input type="radio" name="mov6" value="2" /></li>
+                    <li><input type="radio" name="mov6" value="3" /></li>
+                    <li><input type="radio" name="mov6" value="4" /></li>
+                    <li><input type="radio" name="mov6" value="5" /></li>
+                    <li><input type="radio" name="mov6" value="6" /></li>
+                    <li><input type="radio" name="mov6" value="7" /></li>
+                    <li><input type="hidden" id="timer6" name="timer6" value="0"> </li>
+                    <li> Very Likely </li>
+                </ul>
+            </div>
+
+            <div class="tab">
+              <h3>Title: <span id="title6"/></h3>
+
+              <p>Genre: <span id="genre6"/></p>
+              <p>Year: <span id="year6"/></p>
+              <p>Plot: <span id="plot6"/></p>
+              <hr>
+                <p id="question6"></p>
+                <ul class="likert">
+                    <li> Not at All </li>
+                    <li><input type="radio" name="mov7" value="1" /></li>
+                    <li><input type="radio" name="mov7" value="2" /></li>
+                    <li><input type="radio" name="mov7" value="3" /></li>
+                    <li><input type="radio" name="mov7" value="4" /></li>
+                    <li><input type="radio" name="mov7" value="5" /></li>
+                    <li><input type="radio" name="mov7" value="6" /></li>
+                    <li><input type="radio" name="mov7" value="7" /></li>
+                    <li><input type="hidden" id="timer7" name="timer7" value="0"> </li>
+                    <li> Very Likely </li>
+                </ul>
+            </div>
+
+            <div class="tab">
+              <h3>Title: <span id="title7"/></h3>
+
+              <p>Genre: <span id="genre7"/></p>
+              <p>Year: <span id="year7"/></p>
+              <p>Plot: <span id="plot7"/></p>
+              <hr>
+                <p id="question7"></p>
+                <ul class="likert">
+                    <li> Not at All </li>
+                    <li><input type="radio" name="mov8" value="1" /></li>
+                    <li><input type="radio" name="mov8" value="2" /></li>
+                    <li><input type="radio" name="mov8" value="3" /></li>
+                    <li><input type="radio" name="mov8" value="4" /></li>
+                    <li><input type="radio" name="mov8" value="5" /></li>
+                    <li><input type="radio" name="mov8" value="6" /></li>
+                    <li><input type="radio" name="mov8" value="7" /></li>
+                    <li><input type="hidden" id="timer8" name="timer8" value="0"> </li>
+                    <li> Very Likely </li>
+                </ul>
+            </div>
+
+            <div class="tab">
+              <h3>Title: <span id="title8"/></h3>
+
+              <p>Genre: <span id="genre8"/></p>
+              <p>Year: <span id="year8"/></p>
+              <p>Plot: <span id="plot8"/></p>
+              <hr>
+                <p id="question8"></p>
+                <ul class="likert">
+                    <li> Not at All </li>
+                    <li><input type="radio" name="mov9" value="1" /></li>
+                    <li><input type="radio" name="mov9" value="2" /></li>
+                    <li><input type="radio" name="mov9" value="3" /></li>
+                    <li><input type="radio" name="mov9" value="4" /></li>
+                    <li><input type="radio" name="mov9" value="5" /></li>
+                    <li><input type="radio" name="mov9" value="6" /></li>
+                    <li><input type="radio" name="mov9" value="7" /></li>
+                    <li><input type="hidden" id="timer9" name="timer9" value="0"> </li>
+                    <li> Very Likely </li>
+                </ul>
+            </div>
+
+            <div class="tab">
+              <h3>Title: <span id="title9"/></h3>
+
+              <p>Genre: <span id="genre9"/></p>
+              <p>Year: <span id="year9"/></p>
+              <p>Plot: <span id="plot9"/></p>
+              <hr>
+                <p id="question9"></p>
+                <ul class="likert">
+                    <li> Not at All </li>
+                    <li><input type="radio" name="mov10" value="1" /></li>
+                    <li><input type="radio" name="mov10" value="2" /></li>
+                    <li><input type="radio" name="mov10" value="3" /></li>
+                    <li><input type="radio" name="mov10" value="4" /></li>
+                    <li><input type="radio" name="mov10" value="5" /></li>
+                    <li><input type="radio" name="mov10" value="6" /></li>
+                    <li><input type="radio" name="mov10" value="7" /></li>
+                    <li><input type="hidden" id="timer10" name="timer10" value="0"> </li>
+                    <li> Very Likely </li>
+                </ul>
+            </div>
+
+            <div class="tab">
+
+              <h3>Title: <span id="title10"/></h3>
+
+              <p>Genre: <span id="genre10"/></p>
+              <p>Year: <span id="year10"/></p>
+              <p>Plot: <span id="plot10"/></p>
+                <hr>
+                <p id="question10"></p>
+                <ul class="likert">
+                    <li> Not at All </li>
+                    <li><input type="radio" name="mov11" value="1" /></li>
+                    <li><input type="radio" name="mov11" value="2" /></li>
+                    <li><input type="radio" name="mov11" value="3" /></li>
+                    <li><input type="radio" name="mov11" value="4" /></li>
+                    <li><input type="radio" name="mov11" value="5" /></li>
+                    <li><input type="radio" name="mov11" value="6" /></li>
+                    <li><input type="radio" name="mov11" value="7" /></li>
+                    <li><input type="hidden" id="timer11" name="timer11" value="0"> </li>
+                    <li> Very Likely </li>
+                </ul>
+            </div>
+
+            <div class="tab">
+              <h3>Title: <span id="title11"/></h3>
+
+              <p>Genre: <span id="genre11"/></p>
+              <p>Year: <span id="year11"/></p>
+              <p>Plot: <span id="plot11"/></p>
+              <hr>
+                <p id="question11"></p>
+                <ul class="likert">
+                    <li> Not at All </li>
+                    <li><input type="radio" name="mov12" value="1" /></li>
+                    <li><input type="radio" name="mov12" value="2" /></li>
+                    <li><input type="radio" name="mov12" value="3" /></li>
+                    <li><input type="radio" name="mov12" value="4" /></li>
+                    <li><input type="radio" name="mov12" value="5" /></li>
+                    <li><input type="radio" name="mov12" value="6" /></li>
+                    <li><input type="radio" name="mov12" value="7" /></li>
+                    <li><input type="hidden" id="timer12" name="timer12" value="0"> </li>
+                    <li> Very Likely </li>
+                </ul>
+            </div>
+
+            <div class="tab">
+              <h3>Title: <span id="title12"/></h3>
+
+              <p>Genre: <span id="genre12"/></p>
+              <p>Year: <span id="year12"/></p>
+              <p>Plot: <span id="plot12"/></p>
+              <hr>
+                <p id="question12"></p>
+                <ul class="likert">
+                    <li> Not at All </li>
+                    <li><input type="radio" name="mov13" value="1" /></li>
+                    <li><input type="radio" name="mov13" value="2" /></li>
+                    <li><input type="radio" name="mov13" value="3" /></li>
+                    <li><input type="radio" name="mov13" value="4" /></li>
+                    <li><input type="radio" name="mov13" value="5" /></li>
+                    <li><input type="radio" name="mov13" value="6" /></li>
+                    <li><input type="radio" name="mov13" value="7" /></li>
+                    <li><input type="hidden" id="timer13" name="timer13" value="0"> </li>
+                    <li> Very Likely </li>
+                </ul>
+            </div>
+
+            <div class="tab">
+              <h3>Title: <span id="title13"/></h3>
+
+              <p>Genre: <span id="genre13"/></p>
+              <p>Year: <span id="year13"/></p>
+              <p>Plot: <span id="plot13"/></p>
+              <hr>
+                <p id="question13"></p>
+                <ul class="likert">
+                    <li> Not at All </li>
+                    <li><input type="radio" name="mov14" value="1" /></li>
+                    <li><input type="radio" name="mov14" value="2" /></li>
+                    <li><input type="radio" name="mov14" value="3" /></li>
+                    <li><input type="radio" name="mov14" value="4" /></li>
+                    <li><input type="radio" name="mov14" value="5" /></li>
+                    <li><input type="radio" name="mov14" value="6" /></li>
+                    <li><input type="radio" name="mov14" value="7" /></li>
+                    <li><input type="hidden" id="timer14" name="timer14" value="0"> </li>
+                    <li> Very Likely </li>
+                </ul>
+            </div>
+
+            <div class="tab">
+              <h3>Title: <span id="title14"/></h3>
+
+              <p>Genre: <span id="genre14"/></p>
+              <p>Year: <span id="year14"/></p>
+              <p>Plot: <span id="plot14"/></p>
+              <hr>
+                <p id="question14"></p>
+                <ul class="likert">
+                    <li> Not at All </li>
+                    <li><input type="radio" name="mov15" value="1" /></li>
+                    <li><input type="radio" name="mov15" value="2" /></li>
+                    <li><input type="radio" name="mov15" value="3" /></li>
+                    <li><input type="radio" name="mov15" value="4" /></li>
+                    <li><input type="radio" name="mov15" value="5" /></li>
+                    <li><input type="radio" name="mov15" value="6" /></li>
+                    <li><input type="radio" name="mov15" value="7" /></li>
+                    <li><input type="hidden" id="timer15" name="timer15" value="0"> </li>
+                    <li> Very Likely </li>
+                </ul>
+            </div>
+
+            <div style="overflow:auto;">
+                <div style="float:right;">
+                  <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                  <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                    <input type="submit" id="submit" value="Submit" onclick="getTime(15)">
+                </div>
+              </div>
+
+              <!-- Circles which indicates the steps of the form: -->
+
+        </form>
+        <!-- <div class="grid">
+            <div id="quiz">
+                <h2>Recommendation</h2>
+                <hr style="margin-bottom: 20px">
+                <div id="image"></div>
+                <p id="question"></p>
+                <p>1 is not at all, 7 is very much</p>
+                <div class="buttons">
+                <button id="btn0"><span id="0"></span></button>
+                <button id="btn1"><span id="1"></span></button>
+                <button id="btn2"><span id="2"></span></button>
+                <button id="btn3"><span id="3"></span></button>
+                <button id="btn4"><span id="4"></span></button>
+                <button id="btn5"><span id="5"></span></button>
+                <button id="btn6"><span id="6"></span></button>
+                </div>
+
+                <hr style="margin-top: 50px">
+                <footer>
+                    <p id="progress">Question x of y.</p>
+                </footer>
+            </div>
+
+            <div id="next">
+                <a href="moviesform.php">Next</a>
+            </div>
+        </div>
+        <script src="../js/quiz_controler.js"></script>
+        <script src="../js/question.js"></script>
+        <script src="../js/app1.js"></script> -->
+        </div>
+        <div id="bar" style="text-align:center;margin-top:40px;">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+
+        </div>
+        <script src="../js/p_movies.js"></script>
+        <script src="../js/s_movies.js"></script>
+        <script src="../js/e_movies.js"></script>
+        <script src="../js/movform.js"></script>
+
+
+    </body>
+</html>

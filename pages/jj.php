@@ -1,0 +1,346 @@
+#!/usr/local/bin/php
+
+<?php
+
+    $jb=new mysqli('mysql.cise.ufl.edu', 'nr0','xcpxmjMM110','moviePrj');
+
+if ($jb->connect_error){
+  die('Connect error: '.$jb->connect_errno. ': '.$jb->connect_error);
+}
+
+
+    $sql="INSERT INTO test (name,id)
+    VALUES('Jimmy', '1')";
+
+    $insert=$jb->query($sql);
+    if($insert){
+      echo "successJB";
+    }
+        else{
+            echo '<h3 style="text-align:center;">Error message</h3>';
+        }
+
+    ?>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>Quiz</title>
+            <link rel="stylesheet" href="../styles/style.css" type="text/css">
+
+        </head>
+        <body>
+
+            <div class="grid">
+              <p>Please keep in mind the following scenario while answering
+              questions in this part of the study:</p>
+              <script>
+              var sce=localStorage.getItem("sce");
+              document.getElementById("sce").value=sce;
+              let userID=localStorage.getItem("userID");
+              document.getElementById("uid").value=userID;
+              </script>
+
+              <hr>
+
+            <h3>The image below shows the explanation for why the MovieRec recommended a particulat movie to you.</h3>
+
+            <!-- if use php file, action="explanationsform.php" -->
+            <form id="movform" action="explanationsform.php" method="POST">
+              <!-- <p id="descr"></p> -->
+              <input type="hidden" id="uid" name="uid" value="0">
+              <input type="text" id="sce" name="sce">
+                <div class="tab">
+
+                    <div id="image0"></div>
+                    <p id="question0"></p>
+                    <ul class="likert">
+                        <li> Not at All </li>
+                        <li><input type="radio" id="0r1" name="exp0" value="1"/></li>
+                        <li><input type="radio" id="0r2" name="exp0" value="2" /></li>
+                        <li><input type="radio" id="0r3" name="exp0" value="3" /></li>
+                        <li><input type="radio" id="0r4" name="exp0" value="4" /></li>
+                        <li><input type="radio" id="0r5" name="exp0" value="5" /></li>
+                        <li><input type="radio" id="0r6" name="exp0" value="6" /></li>
+                        <li><input type="radio" id="0r7" name="exp0" value="7" /></li>
+                        <li><input type="hidden" id="timer1" name="timer1" value="0"> </li>
+                        <li> Very Likely </li>
+                    </ul>
+                </div>
+
+                <div class="tab">
+                    <div id="image1"></div>
+                    <p id="question1"></p>
+                    <ul class="likert">
+                        <li> Not at All </li>
+                        <li><input type="radio" id="1r1" name="exp1" value="1" /></li>
+                        <li><input type="radio" id="1r2" name="exp1" value="2" /></li>
+                        <li><input type="radio" id="1r3" name="exp1" value="3" /></li>
+                        <li><input type="radio" id="1r4" name="exp1" value="4" /></li>
+                        <li><input type="radio" id="1r5" name="exp1" value="5" /></li>
+                        <li><input type="radio" id="1r6" name="exp1" value="6" /></li>
+                        <li><input type="radio" id="1r7" name="exp1" value="7" /></li>
+                        <li><input type="hidden" id="timer2" name="timer2" value="0"> </li>
+                        <li> Very Likely </li>
+                    </ul>
+                </div>
+
+                <div class="tab">
+                    <div id="image2"></div>
+                    <p id="question2"></p>
+                    <ul class="likert">
+                        <li> Not at All </li>
+                        <li><input type="radio" id="3r1" name="exp2" value="1" /></li>
+                        <li><input type="radio" id="3r2" name="exp2" value="2" /></li>
+                        <li><input type="radio" id="3r3" name="exp2" value="3" /></li>
+                        <li><input type="radio" id="3r4" name="exp2" value="4" /></li>
+                        <li><input type="radio" id="3r5" name="exp2" value="5" /></li>
+                        <li><input type="radio" id="3r6" name="exp2" value="6" /></li>
+                        <li><input type="radio" id="3r7" name="exp2" value="7" /></li>
+                        <li><input type="hidden" id="timer3" name="timer3" value="0"> </li>
+                        <li> Very Likely </li>
+                    </ul>
+                </div>
+
+                <div class="tab">
+                    <div id="image3"></div>
+                    <p id="question3"></p>
+                    <ul class="likert">
+                        <li> Not at All </li>
+                        <li><input type="radio" id="4r1" name="exp3" value="1" /></li>
+                        <li><input type="radio" id="4r2" name="exp3" value="2" /></li>
+                        <li><input type="radio" id="4r3" name="exp3" value="3" /></li>
+                        <li><input type="radio" id="4r4" name="exp3" value="4" /></li>
+                        <li><input type="radio" id="4r5" name="exp3" value="5" /></li>
+                        <li><input type="radio" id="4r6" name="exp3" value="6" /></li>
+                        <li><input type="radio" id="4r7" name="exp3" value="7" /></li>
+                        <li><input type="hidden" id="timer4" name="timer4" value="0"> </li>
+                        <li> Very Likely </li>
+                    </ul>
+                </div>
+
+                <div class="tab">
+                    <div id="image4"></div>
+                    <p id="question4"></p>
+                    <ul class="likert">
+                        <li> Not at All </li>
+                        <li><input type="radio" id="1r1" name="exp4" value="1" /></li>
+                        <li><input type="radio" id="1r1" name="exp4" value="2" /></li>
+                        <li><input type="radio" id="1r1" name="exp4" value="3" /></li>
+                        <li><input type="radio" id="1r1" name="exp4" value="4" /></li>
+                        <li><input type="radio" id="1r1" name="exp4" value="5" /></li>
+                        <li><input type="radio" id="1r1" name="exp4" value="6" /></li>
+                        <li><input type="radio" id="1r1" name="exp4" value="7" /></li>
+                        <li><input type="hidden" id="timer5" name="timer5" value="0"> </li>
+                        <li> Very Likely </li>
+                    </ul>
+                </div>
+
+                <div class="tab">
+                    <div id="image5"></div>
+                    <p id="question5"></p>
+                    <ul class="likert">
+                        <li> Not at All </li>
+                        <li><input type="radio" id="1r1" name="exp5" value="1" /></li>
+                        <li><input type="radio" id="1r1" name="exp5" value="2" /></li>
+                        <li><input type="radio" id="1r1" name="exp5" value="3" /></li>
+                        <li><input type="radio" id="1r1" name="exp5" value="4" /></li>
+                        <li><input type="radio" id="1r1" name="exp5" value="5" /></li>
+                        <li><input type="radio" id="1r1" name="exp5" value="6" /></li>
+                        <li><input type="radio" id="1r1" name="exp5" value="7" /></li>
+                        <li><input type="hidden" id="timer6" name="timer6" value="0"> </li>
+                        <li> Very Likely </li>
+                    </ul>
+                </div>
+                <div class="tab">
+                    <div id="image6"></div>
+                    <p id="question6"></p>
+                    <ul class="likert">
+                        <li> Not at All </li>
+                        <li><input type="radio" id="1r1" name="exp6" value="1" /></li>
+                        <li><input type="radio" id="1r1" name="exp6" value="2" /></li>
+                        <li><input type="radio" id="1r1" name="exp6" value="3" /></li>
+                        <li><input type="radio" id="1r1" name="exp6" value="4" /></li>
+                        <li><input type="radio" id="1r1" name="exp6" value="5" /></li>
+                        <li><input type="radio" id="1r1" name="exp6" value="6" /></li>
+                        <li><input type="radio" id="1r1" name="exp6" value="7" /></li>
+                        <li><input type="hidden" id="timer7" name="timer7" value="0"> </li>
+                        <li> Very Likely </li>
+                    </ul>
+                </div>
+
+                <div class="tab">
+                    <div id="image7"></div>
+                    <p id="question7"></p>
+                    <ul class="likert">
+                        <li> Not at All </li>
+                        <li><input type="radio" id="1r1" name="exp7" value="1" /></li>
+                        <li><input type="radio" id="1r1" name="exp7" value="2" /></li>
+                        <li><input type="radio" id="1r1" name="exp7" value="3" /></li>
+                        <li><input type="radio" id="1r1" name="exp7" value="4" /></li>
+                        <li><input type="radio" id="1r1" name="exp7" value="5" /></li>
+                        <li><input type="radio" id="1r1" name="exp7" value="6" /></li>
+                        <li><input type="radio" name="exp7" value="7" /></li>
+                        <li><input type="hidden" id="timer8" name="timer8" value="0"> </li>
+                        <li> Very Likely </li>
+                    </ul>
+                </div>
+
+                <div class="tab">
+                    <div id="image8"></div>
+                    <p id="question8"></p>
+                    <ul class="likert">
+                        <li> Not at All </li>
+                        <li><input type="radio" id="1r1" name="exp8" value="1" /></li>
+                        <li><input type="radio" id="1r1" name="exp8" value="2" /></li>
+                        <li><input type="radio" id="1r1" name="exp8" value="3" /></li>
+                        <li><input type="radio" id="1r1" name="exp8" value="4" /></li>
+                        <li><input type="radio" id="1r1" name="exp8" value="5" /></li>
+                        <li><input type="radio" id="1r1" name="exp8" value="6" /></li>
+                        <li><input type="radio" id="1r1" name="exp8" value="7" /></li>
+                        <li><input type="hidden" id="timer9" name="timer9" value="0"> </li>
+                        <li> Very Likely </li>
+                    </ul>
+                </div>
+
+                <div class="tab">
+                    <div id="image9"></div>
+                    <p id="question9"></p>
+                    <ul class="likert">
+                        <li> Not at All </li>
+                        <li><input type="radio" name="exp9" value="1" /></li>
+                        <li><input type="radio" name="exp9" value="2" /></li>
+                        <li><input type="radio" name="exp9" value="3" /></li>
+                        <li><input type="radio" name="exp9" value="4" /></li>
+                        <li><input type="radio" name="exp9" value="5" /></li>
+                        <li><input type="radio" name="exp9" value="6" /></li>
+                        <li><input type="radio" name="exp9" value="7" /></li>
+                        <li><input type="hidden" id="timer10" name="timer10" value="0"> </li>
+                        <li> Very Likely </li>
+                    </ul>
+                </div>
+
+                <div class="tab">
+                    <div id="image10"></div>
+                    <p id="question10"></p>
+                    <ul class="likert">
+                        <li> Not at All </li>
+                        <li><input type="radio" name="exp10" value="1" /></li>
+                        <li><input type="radio" name="exp10" value="2" /></li>
+                        <li><input type="radio" name="exp10" value="3" /></li>
+                        <li><input type="radio" name="exp10" value="4" /></li>
+                        <li><input type="radio" name="exp10" value="5" /></li>
+                        <li><input type="radio" name="exp10" value="6" /></li>
+                        <li><input type="radio" name="exp10" value="7" /></li>
+                        <li><input type="hidden" id="timer11" name="timer11" value="0"> </li>
+
+                        <li> Very Likely </li>
+                    </ul>
+                </div>
+                <div class="tab">
+                    <div id="image11"></div>
+                    <p id="question11"></p>
+                    <ul class="likert">
+                        <li> Not at All </li>
+                        <li><input type="radio" name="exp11" value="1" /></li>
+                        <li><input type="radio" name="exp11" value="2" /></li>
+                        <li><input type="radio" name="exp11" value="3" /></li>
+                        <li><input type="radio" name="exp11" value="4" /></li>
+                        <li><input type="radio" name="exp11" value="5" /></li>
+                        <li><input type="radio" name="exp11" value="6" /></li>
+                        <li><input type="radio" name="exp11" value="7" /></li>
+                        <li><input type="hidden" id="timer12" name="timer12" value="0"> </li>
+                        <li> Very Likely </li>
+                    </ul>
+                </div>
+
+                <div class="tab">
+                    <div id="image12"></div>
+                    <p id="question12"></p>
+                    <ul class="likert">
+                        <li> Not at All </li>
+                        <li><input type="radio" name="exp12" value="1" /></li>
+                        <li><input type="radio" name="exp12" value="2" /></li>
+                        <li><input type="radio" name="exp12" value="3" /></li>
+                        <li><input type="radio" name="exp12" value="4" /></li>
+                        <li><input type="radio" name="exp12" value="5" /></li>
+                        <li><input type="radio" name="exp12" value="6" /></li>
+                        <li><input type="radio" name="exp12" value="7" /></li>
+                        <li><input type="hidden" id="timer13" name="timer13" value="0"> </li>
+                        <li> Very Likely </li>
+                    </ul>
+                </div>
+
+                <div class="tab">
+                    <div id="image13"></div>
+                    <p id="question13"></p>
+                    <ul class="likert">
+                        <li> Not at All </li>
+                        <li><input type="radio" name="exp13" value="1" /></li>
+                        <li><input type="radio" name="exp13" value="2" /></li>
+                        <li><input type="radio" name="exp13" value="3" /></li>
+                        <li><input type="radio" name="exp13" value="4" /></li>
+                        <li><input type="radio" name="exp13" value="5" /></li>
+                        <li><input type="radio" name="exp13" value="6" /></li>
+                        <li><input type="radio" name="exp13" value="7" /></li>
+                        <li><input type="hidden" id="timer14" name="timer14" value="0"> </li>
+                        <li> Very Likely </li>
+                    </ul>
+                </div>
+
+                <div class="tab">
+                    <div id="image14"></div>
+                    <p id="question14"></p>
+                    <ul class="likert">
+                        <li> Not at All </li>
+                        <li><input type="radio" name="exp14" value="1" /></li>
+                        <li><input type="radio" name="exp14" value="2" /></li>
+                        <li><input type="radio" name="exp14" value="3" /></li>
+                        <li><input type="radio" name="exp14" value="4" /></li>
+                        <li><input type="radio" name="exp14" value="5" /></li>
+                        <li><input type="radio" name="exp14" value="6" /></li>
+                        <li><input type="radio" name="exp14" value="7" /></li>
+                        <li><input type="hidden" id="timer15" name="timer15" value="0"> </li>
+                        <li> Very Likely </li>
+                    </ul>
+                </div>
+
+                <div style="overflow:auto;">
+                    <div style="float:right;">
+                      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                      <button type="button" id="nextBtn" disabled onclick="nextPrev(1)">Next</button>
+                      <input type="submit" id="submit" value="Submit" onclick="getTime(15)">
+                    </div>
+                  </div>
+
+
+
+            </form>
+
+            </div>
+            <!-- Circles which indicates the steps of the form: -->
+            <div id="bar" style="text-align: center;margin-top:30px;">
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+
+            <script src="../js/input.js"></script>
+            <script src="../js/expform.js"></script>
+
+
+
+
+        </body>
+    </html>

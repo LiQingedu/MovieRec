@@ -1,0 +1,551 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MovieRec</title>
+        <link rel="shortcut icon" href="../images/icon.jpg">
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="../styles/questions.css">
+        <link href="https://fonts.googleapis.com/css?family=Suez+One&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+      <header>
+      <a href="../index.html">MovieRec</a></header>
+      <main>
+
+
+  <form action="scenario1.php" method="post">
+
+  <label class="statement">Please enter your Mturk user ID:</label>
+  <input type="text" id="userID" name="userID" autofocus required><br>
+    <label class="statement">1. I usually watch a movie because I want to learn new things.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert1" value="7" required>
+        <label>Strongly Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert1" value="6">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert1" value="5">
+        <label>Somewhat Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert1" value="4">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert1" value="3">
+        <label>Somewhat Disgree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert1" value="2">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert1" value="1">
+        <label>Strongly Disagree</label>
+      </li>
+    </ul>
+    <label class="statement">2. I usually watch a movie because I want to relax.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert2" value="7" required>
+        <label>Strongly Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert2" value="6">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert2" value="5">
+        <label>Somewhat Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert2" value="4">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert2" value="3">
+        <label>Somewhat Disgree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert2" value="2">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert2" value="1">
+        <label>Strongly Disagree</label>
+      </li>
+    </ul>
+    <label class="statement">3. I usually watch a movie because I want to get inspried to do better in life.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert3" value="7" required>
+        <label>Strongly Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert3" value="6">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert3" value="5">
+        <label>Somewhat Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert3" value="4">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert3" value="3">
+        <label>Somewhat Disgree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert3" value="2">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert3" value="1">
+        <label>Strongly Disagree</label>
+      </li>
+    </ul>
+    <label class="statement">4. I like movies that challenge my way of seeing the world.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert4" value="7" required>
+        <label>Strongly Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert4" value="6">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert4" value="5">
+        <label>Somewhat Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert4" value="4">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert4" value="3">
+        <label>Somewhat Disgree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert4" value="2">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert4" value="1">
+        <label>Strongly Disagree</label>
+      </li>
+    </ul>
+    <label class="statement">5. I like movies that make me more reﬂective.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert5" value="7" required>
+        <label>Strongly Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert5" value="6">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert5" value="5">
+        <label>Somewhat Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert5" value="4">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert5" value="3">
+        <label>Somewhat Disgree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert5" value="2">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert5" value="1">
+        <label>Strongly Disagree</label>
+      </li>
+    </ul>
+    <label class="statement">6. I like movies that focus on meaningful human conditions.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert6" value="7" required>
+        <label>Strongly Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert6" value="6">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert6" value="5">
+        <label>Somewhat Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert6" value="4">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert6" value="3">
+        <label>Somewhat Disgree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert6" value="2">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert6" value="1">
+        <label>Strongly Disagree</label>
+      </li>
+    </ul>
+    <label class="statement">7. My favorite kinds of movies are ones that make me think.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert7" value="7" required>
+        <label>Strongly Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert7" value="6">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert7" value="5">
+        <label>Somewhat Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert7" value="4">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert7" value="3">
+        <label>Somewhat Disgree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert7" value="2">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert7" value="1">
+        <label>Strongly Disagree</label>
+      </li>
+    </ul>
+    <label class="statement">8. I am very moved by movies that are about people’s search for greater understanding in life.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert8" value="7" required>
+        <label>Strongly Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert8" value="6">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert8" value="5">
+        <label>Somewhat Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert8" value="4">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert8" value="3">
+        <label>Somewhat Disgree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert8" value="2">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert8" value="1">
+        <label>Strongly Disagree</label>
+      </li>
+    </ul>
+    <label class="statement">9. I like movies that have profound meanings or messages to convey.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert9" value="7" required>
+        <label>Strongly Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert9" value="6">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert9" value="5">
+        <label>Somewhat Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert9" value="4">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert9" value="3">
+        <label>Somewhat Disgree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert9" value="2">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert9" value="1">
+        <label>Strongly Disagree</label>
+      </li>
+    </ul>
+    <label class="statement">10. It’s important to me that I have fun when watching a movie.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert10" value="7" required>
+        <label>Strongly Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert10" value="6">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert10" value="5">
+        <label>Somewhat Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert10" value="4">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert10" value="3">
+        <label>Somewhat Disgree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert10" value="2">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert10" value="1">
+        <label>Strongly Disagree</label>
+      </li>
+    </ul>
+    <label class="statement">11. Movies that make me laugh are among my favorites.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert11" value="7" required>
+        <label>Strongly Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert11" value="6">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert11" value="5">
+        <label>Somewhat Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert11" value="4">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert11" value="3">
+        <label>Somewhat Disgree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert11" value="2">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert11" value="1">
+        <label>Strongly Disagree</label>
+      </li>
+    </ul>
+    <label class="statement">12. I ﬁnd that even simple movies can be enjoyable as long as they are fun.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert12" value="7" required>
+        <label>Strongly Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert12" value="6">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert12" value="5">
+        <label>Somewhat Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert12" value="4">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert12" value="3">
+        <label>Somewhat Disgree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert12" value="2">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert12" value="1">
+        <label>Strongly Disagree</label>
+      </li>
+    </ul>
+    <label class="statement">13. I like movies that maybe considered ‘‘silly’’or ‘‘shallow’’ifthey can make me laugh and have a good time.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert13" value="7" required>
+        <label>Strongly Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert13" value="6">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert13" value="5">
+        <label>Somewhat Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert13" value="4">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert13" value="3">
+        <label>Somewhat Disgree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert13" value="2">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert13" value="1">
+        <label>Strongly Disagree</label>
+      </li>
+    </ul>
+    <label class="statement">14. For me, the best movies are ones that are entertaining.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert14" value="7" required>
+        <label>Strongly Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert14" value="6">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert14" value="5">
+        <label>Somewhat Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert14" value="4">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert14" value="3">
+        <label>Somewhat Disgree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert14" value="2">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert14" value="1">
+        <label>Strongly Disagree</label>
+      </li>
+    </ul>
+    <label class="statement">15. My favorite kinds of movies are happy and positive.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert15" value="7" required>
+        <label>Strongly Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert15" value="6">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert15" value="5">
+        <label>Somewhat Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert15" value="4">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert15" value="3">
+        <label>Somewhat Disgree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert15" value="2">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert15" value="1">
+        <label>Strongly Disagree</label>
+      </li>
+    </ul>
+
+
+    <legend>Background information</legend>
+
+        <br>
+
+        <label>1. What is your biological sex?</label>
+        <select name="gender" id="gender" required>
+            <option value="f">Female</option>
+            <option value="m">Male</option>
+
+        </select>
+    <br>
+
+
+        <label>2. What field is your occupation?</label>
+    <select name="occupation" id="occupation" required>
+    <option value="STEM">STEM (Science, Technology, Engineering, Math)</option>
+    <option value="Non-STEM">Non-STEM</option>
+    </select><br>
+
+         <label>3. As a hobby, do you prefer Arts & Craft or Sports more?</label>
+    <select name="hobby" id="hobby">
+    <option value="arts">Arts &amp; Crafts</option>
+    <option value="sports">Sports</option>
+
+    </select><br>
+
+        <label>4. Please describe briefly one important event happened to you recently, and select what catagory it belongs to.
+        Make sure the event can be classified in one of the listed categories.</label><br>
+        <input class="text" type="text" name="event1" id="event1" size="120" required>
+        <select name="event1cat" id="event1cat" required>
+            <option value="travel">Travel</option>
+            <option value="health">Health and Fitness</option>
+
+            <option value="pets">Pets</option>
+
+            <option value="society">Society</option>
+            <option value="sports">Sports</option>
+            <option value="education">Education</option>
+
+            <option value="business">Business</option>
+            <option value="family">Family and Parenting</option>
+
+            <option value="food">Food and Drink</option>
+        </select><br>
+
+
+
+    <script type="text/javascript" src="../js/input.js"></script>
+    <div class="buttons">
+
+      <!-- add function, when click next, display bg_ques -->
+      <button type="submit" class="submit" onclick="getInput();">Submit</button>
+    </div>
+</form>
+
+
+</main>
+
+<footer>
+<p>&copy; 2020, UF ELX Lab</p>
+</footer>
+</body>
+</html>

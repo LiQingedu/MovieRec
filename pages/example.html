@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/shift.js"></script>
+  </head>
+  <body>
+
+
+
+    <table>
+      <tr>
+        <td><video class="addvideo" id="vid2" controls></video></td>
+
+    <td><video class="addvideo" id="vid3" controls></video></td>
+    <td><video class="addvideo" id="vid4" controls></video></td>
+  </tr>
+  <tr>
+    <td><video class="addvideo" id="vid5" controls></video></td>
+    <td><video class="addvideo" id="vid6" controls></video></td>
+    <td><video class="addvideo" id="vid7" controls></video></td>
+  </tr>
+  </table>
+  <script>
+    var vid=document.getElementById("vid2");
+    vid.src=localStorage.getItem("url");
+  </script>
+
+  <script src="../js/video.js"></script>
+  <script src="../js/mVideo.js"></script>
+  </body>
+  </html>
